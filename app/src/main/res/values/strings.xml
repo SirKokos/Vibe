@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Vibe</string>
+
+    <string name="create_acc">"Создание Аккаунта"</string>
+    <string name="welcome">"Добро пожаловать"</string>
+
+
 </resources>
