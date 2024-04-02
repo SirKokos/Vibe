@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Vibe</string>
+    <string name="create_acc">"Создание Аккаунта"</string>
+    <string name="entry_acc">Добро пожаловать</string>
+    <string name="select_page">Выбор действия</string>
+    <string name="password_Description">password</string>
+    <string name="email_Description">Email</string>
+    <string name="full_name_Description">Full name</string>
+    <string name="registr_button_Description">Регистрация</string>
+
+    <string name="entry_button_Description">Вход</string>
+    <string name="title_activity_registartion">RegistartionActivity</string>
+
+    <string name="name_fio">Имя Фамилия: </string>
+    <string name="status">Статус</string>
+    <string name="city">Город: </string>
+    <string name="birthday">День рождения: </string>
+    <string name="link">Ссылкa: </string>
+    <string name="edit_batton">Редактировать профиль</string>
+    <string name="title_activity_chat">ChatActivity</string>
+</resources>
