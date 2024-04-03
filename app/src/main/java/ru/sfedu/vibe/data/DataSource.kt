@@ -46,8 +46,8 @@ class DataSource {
     fun loadsItemsFriend() : List<DataFriend>{
         val itemsFriend = listOf<DataFriend>(
             DataFriend(
-                R.drawable.ali,
-                "Ali DOD",
+                R.drawable.someone_else,
+                "Dima",
                 "Онлайн"
                 ),
             DataFriend(

@@ -16,6 +16,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
@@ -103,7 +104,7 @@ fun Contact( friendList:List<DataFriend>,navHostController : NavHostController){
             }
         },
         content = {
-            MyFriends(friendList,corutine,navBarState)
+            MyFriends(friendList,corutine,navBarState,navHostController)
         }
     )
 
@@ -116,6 +117,7 @@ fun MyFriends(
     friendList:List<DataFriend>,
     corutine: CoroutineScope,
     navBarState : DrawerState,
+    navHostController: NavHostController,
     modifier: Modifier = Modifier,
 ){
     LazyColumn( modifier = Modifier){
@@ -128,19 +130,24 @@ fun MyFriends(
                 IdImage = friendList[it].imageId,
                 title = friendList[it].title,
                 lastMsg = friendList[it].status,
+                navHostController  = navHostController
                 )
         }
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun cardFriend(IdImage:Int, title: String, lastMsg: String){
+fun cardFriend(IdImage:Int, title: String, lastMsg: String,navHostController: NavHostController){
     Card(
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.background,
         ),
         border = BorderStroke(0.5.dp, Color.LightGray),
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth(),
+        onClick = {
+            navHostController.navigate(Destination.OtherProfile.route)
+        }
     ) {
         Row(
             modifier = Modifier,

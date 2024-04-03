@@ -17,6 +17,7 @@ import androidx.navigation.compose.rememberNavController
 import ru.sfedu.vibe.components.Contact
 import ru.sfedu.vibe.components.MyChats
 import ru.sfedu.vibe.components.MyProfile
+import ru.sfedu.vibe.components.OtherProfile
 import ru.sfedu.vibe.components.entry
 import ru.sfedu.vibe.components.registartion
 import ru.sfedu.vibe.components.selectPage
@@ -50,6 +51,7 @@ fun navigate(navController : NavHostController){
         composable(Destination.ChatList.route){ MyChats(DataSource().loadChats(),navController) }
         composable(Destination.MyProfile.route){ MyProfile() }
         composable(Destination.ContactList.route){ Contact( DataSource().loadsItemsFriend() ,navController)}
+        composable(Destination.OtherProfile.route){ OtherProfile() }
     }
 }
 
