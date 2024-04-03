@@ -18,4 +18,5 @@
     <string name="link">Ссылкa: </string>
     <string name="edit_batton">Редактировать профиль</string>
     <string name="title_activity_chat">ChatActivity</string>
+    <string name="setting">Настройки</string>
 </resources>

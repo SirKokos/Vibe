@@ -1,10 +1,14 @@
 package ru.sfedu.vibe.data
 
+
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.ExitToApp
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material3.rememberTopAppBarState
+import androidx.core.content.ContextCompat.getString
+import androidx.core.content.res.TypedArrayUtils.getText
+
+
 import ru.sfedu.vibe.R
 
 class DataSource {
@@ -37,5 +41,32 @@ class DataSource {
             )
         )
         return itemsNav
+    }
+
+    fun loadsItemsFriend() : List<DataFriend>{
+        val itemsFriend = listOf<DataFriend>(
+            DataFriend(
+                R.drawable.ali,
+                "Ali DOD",
+                "Онлайн"
+                ),
+            DataFriend(
+                R.drawable.ali,
+                "Ali DOD",
+                "Онлайн"
+            ),
+            DataFriend(
+                R.drawable.ali,
+                "Ali DOD",
+                "Не в сети"
+            ),
+            DataFriend(
+                R.drawable.ali,
+                "Ali DOD",
+                "Онлайн"
+            )
+        )
+        return itemsFriend
+
     }
 }
